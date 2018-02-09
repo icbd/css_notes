@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>back-slash-A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel="stylesheet" type="text/css" href="./base/normalize.css">
+    <style>
+        dt, dd {
+            display: inline;
+        }
+
+        dd + dt::before {
+            content: '\A';
+            white-space: pre;
+        }
+
+        dd + dd::before {
+            content: ', ';
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>地址:</dt>
+    <dd>上海徐汇区</dd>
+    <dt>电话:</dt>
+    <dd>021-12345</dd>
+    <dd>086-18818818888</dd>
+    <dt>姓名:</dt>
+    <dd>张三</dd>
+</dl>
+</body>
+</html>
