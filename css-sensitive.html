@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Sensitive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="./base/normalize.css">
+    <style>
+        code {
+            color: red;
+        }
+
+        code::after {
+            content: "\A";
+            white-space: pre;
+        }
+
+        div > .code-1 {
+            color: green;
+        }
+
+        DIV > .code-2 {
+            color: green;
+        }
+
+        DiV > .code-3 {
+            color: green;
+        }
+
+        [class="class-div"] > .code-4 {
+            color: green;
+        }
+
+        [CLASS="class-div"] > .code-5 {
+            color: green;
+        }
+
+        [class="CLASS-DIV"] > .code-6 {
+            color: green;
+        }
+
+        [CLASS="CLASS-DIV"] > .code-7 {
+            color: green;
+        }
+
+        .class-div > .code-8 {
+            color: green;
+        }
+
+        .CLASS-DIV > .code-9 {
+            color: green;
+        }
+
+        #id_div > .code-10 {
+            color: green;
+        }
+
+        #ID_DIV > .code-11 {
+            color: green;
+        }
+
+        [data-info="sensitive"] > .code-12 {
+            color: green;
+        }
+
+        [DATA-INFO="sensitive"] > .code-13 {
+            color: green;
+        }
+
+        [data-info="SENSITIVE"] > .code-14 {
+            color: green;
+        }
+        [DATA-INFO="SENSITIVE"] > .code-15 {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+<p>CSS 本身是大小写不敏感的, 除了 CSS 之外的不可控部分. 为避免混淆, 最好统一使用小写.</p>
+<p>CSS:  属性选择器大小写不敏感, 类选择器 和 ID选择器 和 URI 和 Font-Family 大小写敏感.</p>
+<p>HTML: 大小写不敏感.</p>
+
+<div class="class-div" id="id_div" data-info="sensitive">
+    <code class="code-1">div</code>
+    <code class="code-2">DIV</code>
+    <code class="code-3">DiV</code>
+    <code class="code-4">[class="class-div"]</code>
+    <code class="code-5">[CLASS="class-div"]</code>
+    <code class="code-6">[class="CLASS-DIV"]</code>
+    <code class="code-7">[CLASS="CLASS-DIV"]</code>
+    <code class="code-8">.class-div</code>
+    <code class="code-9">.CLASS-DIV</code>
+    <code class="code-10">#id_div</code>
+    <code class="code-11">#ID_DIV</code>
+    <code class="code-12">[data-info="sensitive"]</code>
+    <code class="code-13">[DATA-INFO="sensitive"]</code>
+    <code class="code-14">[data-info="SENSITIVE"]</code>
+    <code class="code-15">[DATA-INFO="SENSITIVE"]</code>
+</div>
+</body>
+</html>
